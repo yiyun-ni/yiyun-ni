@@ -13,7 +13,7 @@ export default function About() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-[0.72fr_1.28fr] md:gap-4 md:items-end">
           {/* Left — About me heading */}
           <div>
-            <h2 className="text-[42px] sm:text-title-lg leading-[0.94] sm:leading-display tracking-title">
+            <h2 className="text-title-lg leading-heading sm:leading-display tracking-title">
               A little
               <br />
               <em className="text-accent">about</em>
@@ -23,18 +23,18 @@ export default function About() {
           </div>
           {/* Right — About me description */}
           <div className="md:pt-14">
-            <p className="font-serif text-[18px] sm:text-xl leading-[1.42] sm:leading-lead text-primary mb-4 sm:mb-6">
+            <p className="font-serif text-xl leading-lead text-primary mb-4 sm:mb-6">
               I'm a biomedical engineer drawn to the space between technology, people, and
               the little details that shape how we experience the world.
             </p>
-            <p className="text-secondary text-[13px] sm:text-md leading-[1.65] sm:leading-loose mb-4 sm:mb-5">
+            <p className="text-secondary text-sm sm:text-md leading-body sm:leading-loose mb-4 sm:mb-5">
               My background spans biomedical science, engineering, and software development,
               which has shaped the way I approach problems from both technical and human
               perspectives. I enjoy turning complex ideas into clear, practical solutions,
               whether that means thinking through a user experience, building something
               from the ground up, or figuring out the details that make it work.
             </p>
-            <p className="text-secondary text-[13px] sm:text-md leading-[1.65] sm:leading-loose">
+            <p className="text-secondary text-sm sm:text-md leading-body sm:leading-loose">
               I'm naturally curious and always looking for something new to learn.
               Outside of work, I enjoy photography and travelling, and I've recently
               been learning Korean — a small reflection of the same curiosity that tends

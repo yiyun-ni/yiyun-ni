@@ -73,7 +73,7 @@ export default function Header() {
               href={`#${id}`}
               onClick={e => handleSectionClick(e, id)}
               className={`
-                shrink-0 text-xs sm:text-sm tracking-[0.08em] sm:tracking-sm uppercase pb-1 border-b transition-colors duration-200
+                shrink-0 text-xs sm:text-sm tracking-sm uppercase pb-1 border-b transition-colors duration-200
                 ${active === id
                   ? 'text-primary border-accent'
                   : 'text-secondary border-transparent hover:text-primary hover:border-accent'}

@@ -39,7 +39,7 @@ export default function Contact() {
       <div className="max-w-[920px] mx-auto grid gap-7 sm:gap-10 md:grid-cols-2 justify-center items-center min-h-[34vh] sm:min-h-[40vh] py-10 sm:py-16">
         {/* Left — heading */}
         <div className="flex justify-center">
-          <h2 className="text-[34px] sm:text-title-md leading-[0.94] sm:leading-display tracking-title text-center">
+          <h2 className="text-title-md leading-heading sm:leading-display tracking-title text-center">
             Let's get
             <br />
             <em className="text-accent">in touch.</em>
@@ -48,7 +48,7 @@ export default function Contact() {
 
         {/* Right — contact me + icons */}
         <div className="flex flex-col items-center gap-4 sm:gap-6">
-          <p className="text-[18px] sm:text-xl tracking-[0.11em] sm:tracking-lg uppercase">Contact Me!</p>
+          <p className="text-xl tracking-sm sm:tracking-lg uppercase">Contact Me!</p>
           <div className="flex gap-3">
             {socials.map(({ label, href, icon }) => (
               <a

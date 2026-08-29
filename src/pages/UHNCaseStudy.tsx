@@ -32,19 +32,19 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-accent text-xs sm:text-sm tracking-[0.11em] sm:tracking-lg uppercase mb-3 sm:mb-5">{children}</p>
+    <p className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-lg uppercase mb-3 sm:mb-5">{children}</p>
   )
 }
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-secondary text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase mb-2 sm:mb-3">{children}</p>
+    <p className="text-secondary text-xs sm:text-sm tracking-sm sm:tracking-md uppercase mb-2 sm:mb-3">{children}</p>
   )
 }
 
 function SectionH2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <h2 className={`text-[32px] sm:text-title-md leading-[1.02] sm:leading-title tracking-heading ${className}`}>
+    <h2 className={`text-title-md leading-heading sm:leading-title tracking-heading ${className}`}>
       {children}
     </h2>
   )
@@ -52,7 +52,7 @@ function SectionH2({ children, className = '' }: { children: React.ReactNode; cl
 
 function Body({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <p className={`text-secondary text-[13px] sm:text-md leading-[1.65] sm:leading-loose ${className}`}>{children}</p>
+    <p className={`text-secondary text-sm sm:text-md leading-body sm:leading-loose ${className}`}>{children}</p>
   )
 }
 
@@ -91,20 +91,20 @@ function TextBlocks({ blocks }: { blocks: CaseStudyTextBlock[] }) {
       {blocks.map((block, index) => (
         <div
           key={block.label ?? block.title}
-          className={`${hasImages ? 'grid gap-5 sm:gap-6 py-5 sm:py-7 md:grid-cols-[minmax(0,1fr)_300px] lg:grid-cols-[minmax(0,1fr)_520px] md:items-center' : 'py-5 sm:py-7'} ${index < blocks.length - 1 ? 'border-b border-border' : ''}`}
+          className={`${hasImages ? 'grid gap-0 md:gap-4 py-4 sm:py-7 md:grid-cols-[minmax(0,1fr)_240px] lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_400px] md:items-center' : 'py-4 sm:py-7'} ${index < blocks.length - 1 ? 'border-b border-border' : ''}`}
         >
           <div>
             {block.label && <Label>{block.label}</Label>}
             {block.title && (
-              <h3 className="font-serif text-[22px] sm:text-title-sm font-normal leading-tight mb-2 sm:mb-3">
+              <h3 className="font-serif text-title-sm font-normal leading-tight mb-2 sm:mb-3">
                 {block.title}
               </h3>
             )}
-            <BodyList body={block.body} className={hasImages ? 'max-w-sm' : 'max-w-2xl'} />
+            <BodyList body={block.body} className={hasImages ? 'max-w-lg' : 'max-w-2xl'} />
           </div>
 
           {block.image && (
-            <div className="w-full max-w-[640px] overflow-hidden rounded-sm bg-surface md:justify-self-end">
+            <div className="w-full max-w-[360px] xl:max-w-[480px] overflow-hidden rounded-sm bg-surface md:justify-self-end">
               <img
                 src={block.image}
                 alt={block.title ?? ''}
@@ -129,16 +129,16 @@ function sectionId(label: string) {
 function StandardSection({ section }: { section: CaseStudySection }) {
   return (
     <Section id={sectionId(section.sectionLabel)}>
-      <div className="grid gap-6 sm:gap-8 md:grid-cols-[180px_1fr] md:gap-8 lg:grid-cols-[1fr_2fr] lg:gap-16 items-start">
+      <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_minmax(0,1fr)] md:gap-10 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-12 xl:grid-cols-[360px_minmax(0,1fr)] xl:gap-16 items-start">
         <div>
           <Eyebrow>{section.sectionLabel}</Eyebrow>
           <SectionH2>
             <TitleLines lines={section.title} />
           </SectionH2>
         </div>
-        <div className="pt-2">
+        <div className="min-w-0 pt-2 lg:max-w-[820px]">
           {section.lead && (
-            <p className="font-serif text-[18px] sm:text-xl leading-[1.42] sm:leading-intro text-primary mb-6 sm:mb-10">
+            <p className="font-serif text-xl leading-lead sm:leading-intro text-primary mb-6 sm:mb-10">
               {section.lead}
             </p>
           )}
@@ -148,7 +148,7 @@ function StandardSection({ section }: { section: CaseStudySection }) {
                 section.body.map(item => (
                   <p
                     key={item}
-                    className="font-serif text-[18px] sm:text-xl leading-[1.42] sm:leading-intro text-primary"
+                    className="font-serif text-xl leading-lead sm:leading-intro text-primary"
                   >
                     {item}
                   </p>
@@ -164,7 +164,7 @@ function StandardSection({ section }: { section: CaseStudySection }) {
               {section.tags.map(tag => (
                 <li
                   key={tag}
-                  className="text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
+                  className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
                 >
                   {tag}
                 </li>
@@ -195,14 +195,14 @@ export default function UHNCaseStudy() {
         <HeroWrap>
           <Link
             to="/#work"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 mb-4 sm:mb-8"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-sm sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 mb-4 sm:mb-8"
           >
             ← {uhnCaseStudy.backLabel}
           </Link>
 
           <Eyebrow>{uhnCaseStudy.sectionLabel}</Eyebrow>
 
-          <h1 className="text-[36px] sm:text-title-lg leading-[1.16] sm:leading-heading tracking-title mb-5 sm:mb-8">
+          <h1 className="text-title-md sm:text-title-lg leading-heading tracking-title mb-5 sm:mb-8">
             {uhnCaseStudy.title.map((line, index) => (
               <Fragment key={line.text}>
                 {index > 0 && <br />}
@@ -215,14 +215,14 @@ export default function UHNCaseStudy() {
             {uhnCaseStudy.tags.map(tag => (
               <span
                 key={tag}
-                className="text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
+                className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <p className="font-serif text-[18px] sm:text-xl leading-[1.42] sm:leading-intro text-primary max-w-2xl mb-4 sm:mb-6">
+          <p className="font-serif text-xl leading-lead sm:leading-intro text-primary max-w-2xl mb-4 sm:mb-6">
             {uhnCaseStudy.intro}
           </p>
 
@@ -230,7 +230,7 @@ export default function UHNCaseStudy() {
             href={uhnCaseStudy.website.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase text-accent border-b border-accent pb-1 hover:text-primary hover:border-primary transition-colors duration-200 mb-6 sm:mb-10"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-sm sm:tracking-md uppercase text-accent border-b border-accent pb-1 hover:text-primary hover:border-primary transition-colors duration-200 mb-6 sm:mb-10"
           >
             {uhnCaseStudy.website.label}
             <span aria-hidden="true">↗</span>
@@ -253,7 +253,7 @@ export default function UHNCaseStudy() {
           <Wrap className="py-6 sm:py-8">
             <Link
               to="/#work"
-              className="text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 inline-flex items-center gap-2"
+              className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 inline-flex items-center gap-2"
             >
               ← {uhnCaseStudy.backLabel}
             </Link>

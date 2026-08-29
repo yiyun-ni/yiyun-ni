@@ -23,10 +23,10 @@
 
   /* Font sizes */
   --text-home-title: clamp(64px, 18vw, 185px); /* Home hero name */
-  --text-title-lg: clamp(46px, 11vw, 104px);   /* Main page and section titles */
-  --text-title-md: clamp(34px, 8vw, 64px);     /* Project and case study titles */
-  --text-title-sm: clamp(23px, 6vw, 27px);     /* Small headings and email link */
-  --text-xl: clamp(20px, 5vw, 22px);           /* Intro and emphasis text */
+  --text-title-lg: clamp(42px, 11vw, 104px);   /* Main page and section titles */
+  --text-title-md: clamp(32px, 7vw, 56px);     /* Project and case study titles */
+  --text-title-sm: clamp(22px, 5vw, 25px);     /* Small headings and email link */
+  --text-xl: clamp(18px, 4vw, 20px);           /* Intro and emphasis text */
   --text-lg: 18px;                             /* Larger body text/list items */
   --text-md: 14px;                             /* Main body copy */
   --text-sm: 12px;                             /* Labels, tags, nav, footer, small links */

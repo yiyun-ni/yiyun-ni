@@ -28,7 +28,7 @@ export default function Experience() {
       <div ref={ref} className={`fade-up ${inView ? 'in-view' : ''}`}>
       {/* Heading — centered */}
       <div className="text-center">
-        <h2 className="text-[42px] sm:text-title-lg leading-[0.94] sm:leading-display tracking-title">
+        <h2 className="text-title-lg leading-heading sm:leading-display tracking-title">
           Selected
           <br />
           <em className="text-accent">experience</em>
@@ -50,21 +50,21 @@ export default function Experience() {
                 onClick={() => toggleExperience(index)}
                 className="grid w-full grid-cols-[1fr_24px] md:grid-cols-[180px_1fr_24px] gap-x-4 md:gap-x-8 gap-y-3 sm:gap-y-4 py-5 sm:py-8 text-left group"
               >
-                <span className="text-accent text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase pt-1 md:row-auto md:col-auto">
+                <span className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-md uppercase pt-1 md:row-auto md:col-auto">
                   {exp.period}
                 </span>
                 <div className="col-span-2 md:col-span-1 md:col-start-2 md:row-start-1">
-                  <p className="text-accent text-xs sm:text-sm tracking-[0.09em] sm:tracking-md uppercase mb-2 sm:mb-3">
+                  <p className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-md uppercase mb-2 sm:mb-3">
                     {exp.company}
                     {exp.location && (
                       <span className="text-secondary"> · {exp.location}</span>
                     )}
                   </p>
-                  <h3 className="text-[22px] sm:text-title-sm leading-tight group-hover:text-accent transition-colors duration-200">
+                  <h3 className="text-title-sm leading-tight group-hover:text-accent transition-colors duration-200">
                     {exp.role}
                   </h3>
                 </div>
-                <span className="text-accent text-[22px] sm:text-title-sm leading-none pt-1 text-right col-start-2 row-start-1 md:col-start-3">
+                <span className="text-accent text-title-sm leading-none pt-1 text-right col-start-2 row-start-1 md:col-start-3">
                   {isOpen ? '-' : '+'}
                 </span>
               </button>
@@ -76,13 +76,13 @@ export default function Experience() {
                 >
                   <div className="hidden md:block" />
                   {Array.isArray(exp.description) ? (
-                    <ul className="text-secondary text-[13px] sm:text-md leading-[1.55] sm:leading-body max-w-2xl list-disc pl-5 space-y-2 sm:space-y-3">
+                    <ul className="text-secondary text-sm sm:text-md leading-body max-w-2xl list-disc pl-5 space-y-2 sm:space-y-3">
                       {exp.description.map(item => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-secondary text-[13px] sm:text-md leading-[1.55] sm:leading-body max-w-lg">
+                    <p className="text-secondary text-sm sm:text-md leading-body max-w-lg">
                       {exp.description}
                     </p>
                   )}
