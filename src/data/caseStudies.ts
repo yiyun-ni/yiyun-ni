@@ -118,17 +118,17 @@ export const uhnCaseStudy = {
       {
         title: 'Product & UI/UX Design',
         body:
-          'Designed the end-to-end participant and researcher-facing experience in Figma, creating clear digital workflows and a reusable component system across the platform.',
+          'Designed the end-to-end participant- and researcher-facing experience in Figma, creating clear digital workflows and a reusable component system across the platform.',
       },
       {
         title: 'Front-End Development',
         body:
-          'Built the participant and researcher-facing interfaces using Next.js, React, TypeScript, and Tailwind CSS, including interactive navigation experiences powered by Google Maps and Street View.',
+          'Built the platform using Next.js, React, TypeScript, and Tailwind CSS, integrating Google Maps and Street View to support interactive spatial navigation tasks.',
       },
       {
         title: 'Back-End & Data',
         body:
-          'Used Supabase and PostgreSQL to support authentication, participant records, intervention data, and application state across the study.',
+          'Used Supabase and PostgreSQL to support authentication, participant records, intervention data, and study progress tracking.',
       },
       {
         title: 'Testing & Iteration',
