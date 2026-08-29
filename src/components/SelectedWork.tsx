@@ -10,10 +10,10 @@ function ProjectItem({ project }: { project: Project }) {
     <article className="py-6 sm:py-10 first:border-t first:border-primary">
       {/* Year + company row */}
       <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-5 sm:mb-8">
-        <span className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-lg uppercase">
+        <span className="text-accent text-xs tracking-sm sm:tracking-lg uppercase">
           {year}
         </span>
-        <span className="text-secondary text-xs sm:text-sm tracking-sm sm:tracking-lg uppercase">
+        <span className="text-secondary text-xs tracking-sm sm:tracking-lg uppercase">
           {company}
         </span>
       </div>
@@ -25,7 +25,7 @@ function ProjectItem({ project }: { project: Project }) {
           <h3 className="text-title-md leading-heading sm:leading-title tracking-heading mb-4 sm:mb-6">
             {title}
           </h3>
-          <p className="text-secondary text-sm sm:text-md leading-body max-w-xl">
+          <p className="text-secondary text-sm leading-body max-w-xl">
             {description}
           </p>
         </div>
@@ -35,7 +35,7 @@ function ProjectItem({ project }: { project: Project }) {
           {tags.map(tag => (
             <li
               key={tag}
-              className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
+              className="text-xs tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
             >
               {tag}
             </li>
@@ -67,7 +67,7 @@ function ProjectItem({ project }: { project: Project }) {
         {route && (
           <Link
             to={route}
-            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-sm uppercase pb-1 hover:text-accent hover:border-accent transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-xs tracking-sm uppercase pb-1 hover:text-accent hover:border-accent transition-colors duration-200"
           >
             View case study
             <span className="text-accent">→</span>

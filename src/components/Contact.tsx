@@ -48,7 +48,7 @@ export default function Contact() {
 
         {/* Right — contact me + icons */}
         <div className="flex flex-col items-center gap-4 sm:gap-6">
-          <p className="text-xl tracking-sm sm:tracking-lg uppercase">Contact Me!</p>
+          <p className="text-lg tracking-sm sm:tracking-lg uppercase">Contact Me!</p>
           <div className="flex gap-3">
             {socials.map(({ label, href, icon }) => (
               <a

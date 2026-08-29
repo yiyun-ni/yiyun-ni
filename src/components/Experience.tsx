@@ -50,11 +50,11 @@ export default function Experience() {
                 onClick={() => toggleExperience(index)}
                 className="grid w-full grid-cols-[1fr_24px] md:grid-cols-[180px_1fr_24px] gap-x-4 md:gap-x-8 gap-y-3 sm:gap-y-4 py-5 sm:py-8 text-left group"
               >
-                <span className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-md uppercase pt-1 md:row-auto md:col-auto">
+                <span className="text-accent text-xs tracking-sm sm:tracking-md uppercase pt-1 md:row-auto md:col-auto">
                   {exp.period}
                 </span>
                 <div className="col-span-2 md:col-span-1 md:col-start-2 md:row-start-1">
-                  <p className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-md uppercase mb-2 sm:mb-3">
+                  <p className="text-accent text-xs tracking-sm sm:tracking-md uppercase mb-2 sm:mb-3">
                     {exp.company}
                     {exp.location && (
                       <span className="text-secondary"> · {exp.location}</span>
@@ -76,13 +76,13 @@ export default function Experience() {
                 >
                   <div className="hidden md:block" />
                   {Array.isArray(exp.description) ? (
-                    <ul className="text-secondary text-sm sm:text-md leading-body max-w-2xl list-disc pl-5 space-y-2 sm:space-y-3">
+                    <ul className="text-secondary text-sm leading-body max-w-2xl list-disc pl-5 space-y-2 sm:space-y-3">
                       {exp.description.map(item => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-secondary text-sm sm:text-md leading-body max-w-lg">
+                    <p className="text-secondary text-sm leading-body max-w-lg">
                       {exp.description}
                     </p>
                   )}

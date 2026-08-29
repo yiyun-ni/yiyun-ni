@@ -4,7 +4,7 @@
 
 /* ─────────────────────────────────────────────────────────────────────────
    Design tokens
-   These create Tailwind classes like bg-background, text-md,
+   These create Tailwind classes like bg-background, text-sm,
    leading-title, tracking-lg, and font-serif.
 ───────────────────────────────────────────────────────────────────────── */
 @theme inline {
@@ -23,15 +23,15 @@
 
   /* Font sizes */
   --text-home-title: clamp(64px, 18vw, 180px); /* Home hero name */
-  --text-title-xl: clamp(42px, 11vw, 104px);   /* Main page and section titles */
+  --text-title-xl: clamp(42px, 11vw, 96px);    /* Main page and section titles */
   --text-title-lg: clamp(32px, 5vw, 48px);     /* Large section titles */
   --text-title-md: clamp(28px, 6vw, 40px);     /* Project and case study titles */
   --text-title-sm: clamp(22px, 5vw, 24px);     /* Small headings and email link */
-  --text-xl: clamp(18px, 4vw, 20px);           /* Intro and emphasis text */
-  --text-lg: 18px;                             /* Larger body text/list items */
-  --text-md: 14px;                             /* Main body copy */
-  --text-sm: 12px;                             /* Labels, tags, nav, footer, small links */
-  --text-xs: 10px;                             /* Extra-small mobile labels */
+  --text-title-xs: clamp(20px, 2.2vw, 24px);   /* Case study block titles */
+  --text-lg: clamp(18px, 1.5vw, 20px);         /* Intro and emphasis text */
+  --text-md: clamp(14px, 1.4vw, 16px);         /* Larger body text/list items */
+  --text-sm: clamp(12px, 1.1vw, 14px);         /* Main body copy */
+  --text-xs: clamp(10px, 0.9vw, 12px);         /* Labels, tags, nav, footer, small links */
 
   /* Line heights */
   --leading-display: 0.88;   /* Oversized hero titles */

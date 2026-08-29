@@ -32,13 +32,13 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-accent text-xs sm:text-sm tracking-sm sm:tracking-lg uppercase mb-3 sm:mb-5">{children}</p>
+    <p className="text-accent text-xs tracking-sm sm:tracking-lg uppercase mb-3 sm:mb-5">{children}</p>
   )
 }
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-secondary text-xs sm:text-sm tracking-sm sm:tracking-md uppercase mb-2 sm:mb-3">{children}</p>
+    <p className="text-secondary text-xs tracking-sm sm:tracking-md uppercase mb-2 sm:mb-3">{children}</p>
   )
 }
 
@@ -52,7 +52,7 @@ function SectionH2({ children, className = '' }: { children: React.ReactNode; cl
 
 function Body({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <p className={`text-secondary text-sm sm:text-md leading-body sm:leading-loose ${className}`}>{children}</p>
+    <p className={`text-secondary text-sm leading-body sm:leading-loose ${className}`}>{children}</p>
   )
 }
 
@@ -101,7 +101,7 @@ function TextBlocks({ blocks }: { blocks: CaseStudyTextBlock[] }) {
           <div>
             {block.label && <Label>{block.label}</Label>}
             {block.title && (
-              <h3 className="font-serif text-title-sm font-normal leading-tight mb-2 sm:mb-3">
+              <h3 className="font-serif text-title-xs font-normal leading-tight mb-2 sm:mb-3">
                 {block.title}
               </h3>
             )}
@@ -143,7 +143,7 @@ function StandardSection({ section }: { section: CaseStudySection }) {
         </div>
         <div className="min-w-0 pt-2 lg:max-w-[820px]">
           {section.lead && (
-            <p className="font-serif text-xl leading-lead sm:leading-intro text-primary mb-6 sm:mb-10">
+            <p className="font-serif text-lg leading-lead sm:leading-intro text-primary mb-6 sm:mb-10">
               {section.lead}
             </p>
           )}
@@ -153,7 +153,7 @@ function StandardSection({ section }: { section: CaseStudySection }) {
                 section.body.map(item => (
                   <p
                     key={item}
-                    className="font-serif text-xl leading-lead sm:leading-intro text-primary"
+                    className="font-serif text-lg leading-lead sm:leading-intro text-primary"
                   >
                     {item}
                   </p>
@@ -169,7 +169,7 @@ function StandardSection({ section }: { section: CaseStudySection }) {
               {section.tags.map(tag => (
                 <li
                   key={tag}
-                  className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
+                  className="text-xs tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
                 >
                   {tag}
                 </li>
@@ -200,7 +200,7 @@ export default function UHNCaseStudy() {
         <HeroWrap>
           <Link
             to="/#work"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-sm sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 mb-4 sm:mb-8"
+            className="inline-flex items-center gap-2 text-xs tracking-sm sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 mb-4 sm:mb-8"
           >
             ← {uhnCaseStudy.backLabel}
           </Link>
@@ -220,14 +220,14 @@ export default function UHNCaseStudy() {
             {uhnCaseStudy.tags.map(tag => (
               <span
                 key={tag}
-                className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
+                className="text-xs tracking-sm sm:tracking-md uppercase border border-border px-3 py-[5px] text-secondary"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <p className="font-serif text-xl leading-lead sm:leading-intro text-primary max-w-2xl mb-4 sm:mb-6">
+          <p className="font-serif text-lg leading-intro text-primary max-w-2xl mb-4 sm:mb-6">
             {uhnCaseStudy.intro}
           </p>
 
@@ -235,7 +235,7 @@ export default function UHNCaseStudy() {
             href={uhnCaseStudy.website.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-sm sm:tracking-md uppercase text-accent border-b border-accent pb-1 hover:text-primary hover:border-primary transition-colors duration-200 mb-6 sm:mb-10"
+            className="inline-flex items-center gap-2 text-xs tracking-sm sm:tracking-md uppercase text-accent border-b border-accent pb-1 hover:text-primary hover:border-primary transition-colors duration-200 mb-6 sm:mb-10"
           >
             {uhnCaseStudy.website.label}
             <span aria-hidden="true">↗</span>
@@ -258,7 +258,7 @@ export default function UHNCaseStudy() {
           <Wrap className="py-6 sm:py-8">
             <Link
               to="/#work"
-              className="text-xs sm:text-sm tracking-sm sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 inline-flex items-center gap-2"
+              className="text-xs tracking-sm sm:tracking-md uppercase text-secondary hover:text-accent transition-colors duration-200 inline-flex items-center gap-2"
             >
               ← {uhnCaseStudy.backLabel}
             </Link>

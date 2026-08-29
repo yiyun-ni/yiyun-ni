@@ -12,7 +12,7 @@ export default function Hero() {
           <em className="text-accent">Ni</em>
         </h1>
 
-        <p className="font-serif text-secondary text-md sm:text-lg leading-body sm:leading-relaxed max-w-[60ch]">
+        <p className="font-serif text-secondary text-md leading-body sm:leading-relaxed max-w-[60ch]">
           Biomedical Engineering graduate working across software development, product design, 
           and technical project delivery.
         </p>
@@ -20,7 +20,7 @@ export default function Hero() {
 
       {/* Right — secondary info panel */}
       <aside className="w-full max-w-sm md:w-52 lg:mr-[6%]">
-        <p className="text-md tracking-sm sm:tracking-lg uppercase mb-3 sm:mb-5">WHAT I DO</p>
+        <p className="text-sm tracking-sm sm:tracking-lg uppercase mb-3 sm:mb-5">WHAT I DO</p>
         <ul className="border-t border-border">
           {[
             'Biomedical Engineer',
@@ -30,7 +30,7 @@ export default function Hero() {
           ].map((item, i) => (
             <li
               key={item}
-              className="animate-slide-up font-serif text-md sm:text-lg py-3 sm:py-4 border-b border-border"
+              className="animate-slide-up font-serif text-md py-3 sm:py-4 border-b border-border"
               style={{ animationDelay: `${0.3 + i * 0.15}s` }}
             >
               {item}
