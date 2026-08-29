@@ -63,8 +63,8 @@ function TitleLines({ lines }: { lines: string[] }) {
         <Fragment key={line}>
           {index > 0 && (
             <>
-              <span className="md:hidden"> </span>
-              <br className="hidden md:block" />
+              <span className="lg:hidden"> </span>
+              <br className="hidden lg:block" />
             </>
           )}
           {line}
