@@ -21,7 +21,7 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
   const { ref, inView } = useInView()
   return (
     <section id={id} className={`border-t border-border scroll-mt-[60px] sm:scroll-mt-[68px] ${className}`}>
-      <Wrap className="py-9 sm:py-14 lg:py-24">
+      <Wrap className="py-7 sm:py-10 lg:py-16">
         <div ref={ref} className={`fade-up ${inView ? 'in-view' : ''}`}>
           {children}
         </div>
@@ -44,7 +44,7 @@ function Label({ children }: { children: React.ReactNode }) {
 
 function SectionH2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <h2 className={`text-title-md leading-heading sm:leading-title tracking-heading ${className}`}>
+    <h2 className={`text-title-lg leading-heading sm:leading-title tracking-heading pb-4 sm:pb-5 lg:pb-6 ${className}`}>
       {children}
     </h2>
   )
@@ -61,7 +61,12 @@ function TitleLines({ lines }: { lines: string[] }) {
     <>
       {lines.map((line, index) => (
         <Fragment key={line}>
-          {index > 0 && <br />}
+          {index > 0 && (
+            <>
+              <span className="md:hidden"> </span>
+              <br className="hidden md:block" />
+            </>
+          )}
           {line}
         </Fragment>
       ))}
@@ -91,7 +96,7 @@ function TextBlocks({ blocks }: { blocks: CaseStudyTextBlock[] }) {
       {blocks.map((block, index) => (
         <div
           key={block.label ?? block.title}
-          className={`${hasImages ? 'grid gap-0 md:gap-4 py-4 sm:py-7 md:grid-cols-[minmax(0,1fr)_240px] lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_400px] md:items-center' : 'py-4 sm:py-7'} ${index < blocks.length - 1 ? 'border-b border-border' : ''}`}
+          className={`${hasImages ? 'grid gap-0 md:gap-4 py-2 sm:py-4 md:py-6 md:grid-cols-[minmax(0,1fr)_240px] lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_400px] md:items-center' : 'py-2 sm:py-4 md:py-6'} ${index < blocks.length - 1 ? 'border-b border-border' : ''}`}
         >
           <div>
             {block.label && <Label>{block.label}</Label>}
@@ -129,7 +134,7 @@ function sectionId(label: string) {
 function StandardSection({ section }: { section: CaseStudySection }) {
   return (
     <Section id={sectionId(section.sectionLabel)}>
-      <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_minmax(0,1fr)] md:gap-10 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-12 xl:grid-cols-[360px_minmax(0,1fr)] xl:gap-16 items-start">
+      <div className="grid gap-0 md:grid-cols-[300px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[340px_minmax(0,1fr)] xl:grid-cols-[360px_minmax(0,1fr)] xl:gap-8 items-start">
         <div>
           <Eyebrow>{section.sectionLabel}</Eyebrow>
           <SectionH2>
@@ -202,7 +207,7 @@ export default function UHNCaseStudy() {
 
           <Eyebrow>{uhnCaseStudy.sectionLabel}</Eyebrow>
 
-          <h1 className="text-title-md sm:text-title-lg leading-heading tracking-title mb-5 sm:mb-8">
+          <h1 className="text-title-xl leading-heading tracking-title mb-5 sm:mb-8">
             {uhnCaseStudy.title.map((line, index) => (
               <Fragment key={line.text}>
                 {index > 0 && <br />}

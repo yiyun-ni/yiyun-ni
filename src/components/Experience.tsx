@@ -28,7 +28,7 @@ export default function Experience() {
       <div ref={ref} className={`fade-up ${inView ? 'in-view' : ''}`}>
       {/* Heading — centered */}
       <div className="text-center">
-        <h2 className="text-title-lg leading-heading sm:leading-display tracking-title">
+        <h2 className="text-title-xl leading-heading sm:leading-display tracking-title">
           Selected
           <br />
           <em className="text-accent">experience</em>

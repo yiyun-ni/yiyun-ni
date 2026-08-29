@@ -89,7 +89,7 @@ export default function SelectedWork() {
       <div ref={ref} className={`fade-up ${inView ? 'in-view' : ''}`}>
         {/* Heading */}
         <div>
-          <h2 className="text-title-lg leading-heading sm:leading-display tracking-title">
+          <h2 className="text-title-xl leading-heading sm:leading-display tracking-title">
             Projects
             <br />
             <em className="text-accent">& work</em>

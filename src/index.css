@@ -22,10 +22,11 @@
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;    /* Titles and feature text */
 
   /* Font sizes */
-  --text-home-title: clamp(64px, 18vw, 185px); /* Home hero name */
-  --text-title-lg: clamp(42px, 11vw, 104px);   /* Main page and section titles */
-  --text-title-md: clamp(32px, 7vw, 56px);     /* Project and case study titles */
-  --text-title-sm: clamp(22px, 5vw, 25px);     /* Small headings and email link */
+  --text-home-title: clamp(64px, 18vw, 180px); /* Home hero name */
+  --text-title-xl: clamp(42px, 11vw, 104px);   /* Main page and section titles */
+  --text-title-lg: clamp(32px, 5vw, 48px);     /* Large section titles */
+  --text-title-md: clamp(28px, 6vw, 40px);     /* Project and case study titles */
+  --text-title-sm: clamp(22px, 5vw, 24px);     /* Small headings and email link */
   --text-xl: clamp(18px, 4vw, 20px);           /* Intro and emphasis text */
   --text-lg: 18px;                             /* Larger body text/list items */
   --text-md: 14px;                             /* Main body copy */

@@ -74,7 +74,7 @@ export const uhnCaseStudy = {
     },
     {
       sectionLabel: '03 — Research Administration',
-      title: ['Behind the Research'],
+      title: ['Behind the', 'Research'],
       lead:
         'The platform also includes researcher-facing tools for managing participants and monitoring the intervention.',
       body: [
@@ -111,7 +111,7 @@ export const uhnCaseStudy = {
   ] satisfies CaseStudySection[],
   role: {
     sectionLabel: '04 — My Role',
-    title: ['Development &', 'Delivery'],
+    title: ['Development', '& Delivery'],
     lead:
       'My work on Spatial Navigation spans the full development lifecycle, from translating research requirements into product features to implementation, testing, and deployment.',
     blocks: [

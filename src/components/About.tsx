@@ -13,7 +13,7 @@ export default function About() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-[0.72fr_1.28fr] md:gap-4 md:items-end">
           {/* Left — About me heading */}
           <div>
-            <h2 className="text-title-lg leading-heading sm:leading-display tracking-title">
+            <h2 className="text-title-xl leading-heading sm:leading-display tracking-title">
               A little
               <br />
               <em className="text-accent">about</em>
