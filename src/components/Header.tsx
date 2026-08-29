@@ -1,18 +1,24 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useActiveSection } from '../hooks/useActiveSection'
 
-const homeLinks = [
+type NavLink = {
+  id: string
+  label: string
+  shortLabel?: string
+}
+
+const homeLinks: NavLink[] = [
   { id: 'about',      label: 'About'      },
   { id: 'work',       label: 'Work'       },
   { id: 'experience', label: 'Experience' },
   { id: 'contact',    label: 'Contact'    },
 ]
 
-const uhnLinks = [
-  { id: 'overview',                 label: 'Overview'               },
-  { id: 'spatial-training',         label: 'Spatial Training'       },
-  { id: 'research-administration',  label: 'Research Administration'},
-  { id: 'my-role',                  label: 'My Role'                },
+const uhnLinks: NavLink[] = [
+  { id: 'overview',                 label: 'Overview',                shortLabel: 'Overview' },
+  { id: 'spatial-training',         label: 'Spatial Training',        shortLabel: 'Training' },
+  { id: 'research-administration',  label: 'Research Administration', shortLabel: 'Admin' },
+  { id: 'my-role',                  label: 'My Role',                 shortLabel: 'Role' },
 ]
 
 export default function Header() {
@@ -61,7 +67,7 @@ export default function Header() {
 
         {/* Section links */}
         <div className="no-scrollbar flex flex-1 justify-end gap-3 overflow-x-auto whitespace-nowrap sm:gap-6 lg:gap-8">
-          {links.map(({ id, label }) => (
+          {links.map(({ id, label, shortLabel }) => (
             <a
               key={id}
               href={`#${id}`}
@@ -73,7 +79,8 @@ export default function Header() {
                   : 'text-secondary border-transparent hover:text-primary hover:border-accent'}
               `}
             >
-              {label}
+              <span className="sm:hidden">{shortLabel ?? label}</span>
+              <span className="hidden sm:inline">{label}</span>
             </a>
           ))}
         </div>
