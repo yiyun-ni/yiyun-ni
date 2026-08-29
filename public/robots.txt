@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yiyun-ni.vercel.app/sitemap.xml
