@@ -27,7 +27,7 @@ export const uhnCaseStudy = {
   intro:
     'A digital health platform supporting remotely delivered spatial navigation training and cognitive intervention research through structured, interactive virtual navigation tasks.',
   website: {
-    label: 'View Live Platform ↗',
+    label: 'View Live Platform',
     href: 'https://spatialnavigation-a4cvh0abfqerd3b5.canadacentral-01.azurewebsites.net',
   },
   sections: [

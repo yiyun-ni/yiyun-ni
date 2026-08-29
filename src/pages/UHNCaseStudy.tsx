@@ -238,6 +238,9 @@ export default function UHNCaseStudy() {
             className="inline-flex items-center gap-2 text-xs tracking-sm sm:tracking-md uppercase text-accent border-b border-accent pb-1 hover:text-primary hover:border-primary transition-colors duration-200 mb-6 sm:mb-10"
           >
             {uhnCaseStudy.website.label}
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M3 12L12 3M6.5 3H12V8.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
 
           <img
