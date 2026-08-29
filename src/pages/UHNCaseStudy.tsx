@@ -238,7 +238,6 @@ export default function UHNCaseStudy() {
             className="inline-flex items-center gap-2 text-xs tracking-sm sm:tracking-md uppercase text-accent border-b border-accent pb-1 hover:text-primary hover:border-primary transition-colors duration-200 mb-6 sm:mb-10"
           >
             {uhnCaseStudy.website.label}
-            <span aria-hidden="true">↗</span>
           </a>
 
           <img
